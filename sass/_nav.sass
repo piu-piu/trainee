@@ -72,7 +72,70 @@
             padding: 0 25px
         li:last-child::after
             display: none
-@media (max-width: 991px)
+    &-mobmenu
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &__list
+            display: none
+            position: absolute
+            top: 130px
+            left: 25px
+            width: 90%
+            margin: auto
+            list-style: none
+            background-color: #f2f2f2
+        &__items
+            margin-bottom: 10px
+            padding-bottom: 10px
+            border-bottom: 1px solid gray
+            width: 100%
+            a
+                text-decoration: none
+                color: black
+        &__header
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            &__btn
+                display: none
+                background: url('../img/burger.png')
+                background-repeat: no-repeat
+                background-position: center
+            &-logo
+                display: none
+                width: 20px
+                height: 20px
+            &-text
+                display: none
+            &-search
+                display: none
+
+
+
+@media (min-width: 525px)
     .nav
+        &-mob-menu__list
+            display: none
+@media (min-width: 768px) and (max-width: 991px)
+    .nav
+        &-mob-menu
+            &__list
+                display: none
+            div
+                display: block
+
+        &-container
+            margin: 0 20px
         &-city, &-today, &-time, &-weather
             display: none
+        &-menu
+            flex-direction: column
+@media (min-width: 321px) and (max-width: 767px)
+    .nav
+        &-container
+            margin: 0 20px
+        &-city, &-today, &-time, &-weather
+            display: none
+        &-menu
+            flex-direction: column

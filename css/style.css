@@ -18,6 +18,7 @@ body, html {
   background-color: black;
   height: 55px;
   padding: 20px 0;
+  overflow: hidden;
 }
 
 .header-data {
@@ -26,6 +27,24 @@ body, html {
 
 .header a {
   color: white;
+}
+
+@media (max-width: 991px) {
+  .header-data {
+    display: none;
+  }
+  .header {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 991px) {
+  .header {
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+  }
 }
 
 .nav-container {
@@ -148,9 +167,111 @@ body, html {
   display: none;
 }
 
-@media (max-width: 991px) {
+.nav-mobmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-mobmenu__list {
+  display: none;
+  position: absolute;
+  top: 130px;
+  left: 25px;
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  background-color: #f2f2f2;
+}
+
+.nav-mobmenu__items {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
+
+.nav-mobmenu__items a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-mobmenu__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-mobmenu__header__btn {
+  display: none;
+  background: url("../img/burger.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-mobmenu__header-logo {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-mobmenu__header-text {
+  display: none;
+}
+
+.nav-mobmenu__header-search {
+  display: none;
+}
+
+@media (min-width: 525px) {
+  .nav-mob-menu__list {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-mob-menu__list {
+    display: none;
+  }
+  .nav-mob-menu div {
+    display: block;
+  }
+  .nav-container {
+    margin: 0 20px;
+  }
   .nav-city, .nav-today, .nav-time, .nav-weather {
     display: none;
+  }
+  .nav-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .nav-container {
+    margin: 0 20px;
+  }
+  .nav-city, .nav-today, .nav-time, .nav-weather {
+    display: none;
+  }
+  .nav-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

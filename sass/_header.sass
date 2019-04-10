@@ -3,7 +3,20 @@
     background-color: black
     height: 55px
     padding: 20px 0
+    overflow: hidden
     &-data
         float: right
     a
         color: white
+@media (max-width: 991px)
+    .header-data
+        display: none
+    .header
+        font-size: 14px
+        padding: 20px
+@media (min-width: 321px) and (max-width: 991px)
+    .header
+        font-size: 12px
+        padding: 20px
+        text-align: center
+
